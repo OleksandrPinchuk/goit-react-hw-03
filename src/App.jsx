@@ -3,7 +3,7 @@ import ContactForm from './components/ContactForm/ContactForm'
 import ContactList from './components/ContactList/ContactList'
 import SearchBox from './components/SearchBox/SearchBox'
 import initialContacts from './initialContacts.json'
-import './App.css'
+import css from './App.module.css'
 
 const allContacts = () => {
   const storedContacts = localStorage.getItem('contacts');
@@ -36,9 +36,9 @@ function App() {
   );
 
   return (
-    
-      <div>
-        <h1>Phonebook</h1>
+
+      <div className={css.container}>
+        <h1 className={css.title}>Phonebook</h1>
         <ContactForm addContact={addContact} />
         <SearchBox searchName={searchName} handleSearch={handleSearch}/>
         <ContactList contacts={filteredContacts} deleteContact={deleteContact} />

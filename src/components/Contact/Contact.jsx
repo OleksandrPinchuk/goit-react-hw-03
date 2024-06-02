@@ -1,8 +1,12 @@
-const Contact = ({contact, deleteContact}) => {
+import css from './Contact.module.css'
+const Contact = ({ contact, deleteContact }) => {
     
     return (
-        <li>
-            {contact.name} {contact.phone}
+        <li className={css.item}>
+            <div>
+                <p>{contact.name}</p>
+                <p>{contact.phone}</p>
+            </div>
             <button type='button' onClick={()=>deleteContact(contact.id)}>Delete</button>
         </li>
     )
