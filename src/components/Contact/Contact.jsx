@@ -1,4 +1,5 @@
 const Contact = ({contact, deleteContact}) => {
+    
     return (
         <li>
             {contact.name} {contact.phone}

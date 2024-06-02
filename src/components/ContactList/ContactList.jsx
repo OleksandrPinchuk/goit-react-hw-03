@@ -1,5 +1,7 @@
 import Contact from '../Contact/Contact';
-const ContactList = ({contacts, deleteContact}) => {
+
+const ContactList = ({ contacts, deleteContact }) => {
+    
     return (
         <ul>
             {contacts.map(contact => (

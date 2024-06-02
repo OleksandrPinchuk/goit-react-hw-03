@@ -8,7 +8,7 @@ import './App.css'
 const allContacts = () => {
   const storedContacts = localStorage.getItem('contacts');
   return storedContacts ? JSON.parse(storedContacts) : initialContacts;
-}
+};
 
 function App() {
 
@@ -22,11 +22,6 @@ function App() {
   const addContact = (newContact) => {
     setContacts([...contacts, newContact])
   }
-  // const addContact = (newContact) => {
-  //   setContacts((contacts) => {
-  //     return [...contacts, newContact]
-  //   }) 
-  // }
 
   const deleteContact = (contactId) => {
       setContacts((contacts) =>
@@ -36,11 +31,9 @@ function App() {
 
   const handleSearch = (value) => { setSearchName(value) };
 
-  const filteredContacts = contacts.filter((contact) => {
+  const filteredContacts = contacts.filter((contact) => 
     contact.name.toLowerCase().includes(searchName.toLowerCase())
-    console.log(contact.name.toLowerCase().includes(searchName.toLowerCase()))
-  });
-  console.log(filteredContacts)
+  );
 
   return (
     

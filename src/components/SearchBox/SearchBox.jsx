@@ -1,4 +1,5 @@
 const SearchBox = ({ searchName, handleSearch }) => {
+    
     return (
         <div >
             <label htmlFor='find'>Find contacts by name</label>
