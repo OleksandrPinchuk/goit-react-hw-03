@@ -8,3 +8,15 @@
     padding: 10px;
     width: auto;
 }
+
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.svg {
+    margin-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+
